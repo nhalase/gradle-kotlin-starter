@@ -3,7 +3,7 @@
 # Includes configuration for Windows, macOS, Linux, Vim, JetBrains IDEs, Visual Studio and Visual Studio Code.
 # Does NOT include any language, framework, toolchain or build system configuration.
 #################################################################################################################################
-# gitignore matcher rules: 
+# gitignore matcher rules:
 #   /dir will match a file, directory, link, anything named dir
 #   /dir/ will match only a directory named dir
 #   /dir/* will match all files, directories and anything else inside a directory named dir (but not the dir directory itself).
@@ -529,7 +529,10 @@ FodyWeavers.xsd
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # Start by ignoring all JetBrains IDE configuration files.
-.idea
+.idea/*
+
+!.idea/.gitignore
+!.idea/encodings.xml
 
 ## Optional. JetBrains project-based dictionary sharing is enabled by default.
 ## NOTE: Dictionary filenames are based on the system username of the committer; beware of collisions (e.g., tbombadil.xml).
@@ -570,6 +573,58 @@ fabric.properties
 # Legacy JetBrains IDE project config format. NEVER share .iws files!
 ## NOTE: It's unlikely you'll ever see this file generated if you're starting with newer projects.
 *.iws
+
+
+### Kotlin ###
+.kpt-pipeline
+
+# Compiled class file
+*.class
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+
+### Gradle ###
+.gradle
+**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java heap dump
+*.hprof
 
 
 ### Generic ignores
